@@ -16,4 +16,4 @@ bot.add_cog(help_cog(bot))
 bot.add_cog(music_cog(bot))
 
 #start the bot with our token
-bot.run(TOKEN)
+bot.run(os.environ["DISCORD_TOKEN"])
