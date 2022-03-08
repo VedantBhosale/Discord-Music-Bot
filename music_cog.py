@@ -1,7 +1,6 @@
 from ast import alias
 import discord
 from discord.ext import commands
-
 from youtube_dl import YoutubeDL
 
 class music_cog(commands.Cog):
@@ -9,11 +8,9 @@ class music_cog(commands.Cog):
         self.bot = bot
         self.is_playing = False
         self.is_paused = False
-
         self.music_queue = []
         self.YDL_OPTIONS = {'format': 'bestaudio', 'noplaylist':'True'}
         self.FFMPEG_OPTIONS = {'before_options': '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5', 'options': '-vn'}
-
         self.vc = None
 
     def search_yt(self, item):
